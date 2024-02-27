@@ -42,7 +42,7 @@ const register = async (req, res, next) => {
             to: `${req.body.email}`, // list of receivers
             subject: "Enviado desde nodemailer ✔", // Subject line
             text: "Hello world?", // plain text body
-            html: `<b>Bienvenido a la aplicacion! ${req.body.name}, solo te queda un paso por realizar, pincha en el siguiente enláce para completar tu registro: <a href="http://localhost:4200/auth/confirm-user/${user.token}">Confirmar usuario<a> </b>`, // html body
+            html: `<b>Bienvenido a la aplicacion! ${req.body.name}, solo te queda un paso por realizar, pincha en el siguiente enláce para completar tu registro: <a href="https://angular-final-project-front.vercel.app/auth/confirm-user/${user.token}">Confirmar usuario<a> </b>`, // html body
           });
         return res.status(201).json({msg: 'Revisa tu correo. Se te ha enviado un enlace de confirmación'})
 
